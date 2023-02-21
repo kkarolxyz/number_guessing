@@ -35,11 +35,11 @@ def start_game():
                 raise ValueError("Please guess a number within the given range")
 
             attempts += 1
-            attempt_list.append(attempts)
 
             if guess == random_number:
                 print("Nice ! You got it")
                 print(f"It took you {attempts} attempts ! ")
+                attempt_list.append(attempts)
                 wanna_play = input(f"{player_name} would you like to play again ? '(Enter Yes or No)' ")
                 if wanna_play.lower() != 'yes':
                     print("Cool, take a brake")
